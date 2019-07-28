@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/commen.css">
+    <style>
+        #main{background: url(./images/bg20190506.jpg) no-repeat center 0;}  
+        #nav{background:url(./images/nav_down_re.png)repeat-x, url(./images/nav.png)no-repeat center 0;}
+        #nav .container{min-height: 236px;overflow: hidden;}
+        #nav .nav-logo{width: 138px;height: 112px;margin: 15px auto;}
+        #nav dl{position: absolute;top: 0;}
+        #nav dt{height: 66px;}
+        #nav dt a{width: 100%;height: 100%;display: block;text-indent:-9999px;overflow: hidden;}
+        #nav dd{line-height: 27px;font-size: 12px;text-align: center;}
+        #nav dd a{color: white; position: relative;}
+        #nav dd a:hover{color: red;text-decoration: underline;}
+        #nav dd a.hot:after,#nav dd a.new:after{content: "";display: block;width: 12px;height: 12px; background: url(./images/nav_tips.png) 
+        no-repeat;position: absolute;right: -15px;top: 0;}
+        #nav dd a.hot:after{background-position: 0 -12px; }
+        #nav dd a.new:after{background-position: 0 0;}
+        #nav dd a{color: white;}
+        #nav .nav-index{width: 65px;left: 0;}
+        #nav .nav-zl{width: 69px;left:98px; }
+        #nav .nav-ss{width:74px ;left: 203px;}
+        #nav .nav-hd{width: 68px;left: 325px;}
+        #link{height: 175px;}
+        #link a{width: 463px;height: 100%;display: block;margin: 0 auto;}
+
+        #banner{height: 276px; background: url(./images/top.png)no-repeat;margin-top:20px; }
+        #banner .banner-left{width: 240px;height: 310px;background: url(./images/down_user_spr.png)no-repeat;margin: -20px 0 0 7px;}
+        #banner .banner-download p{width: 91px;height: 25px;background: url(./images/down_user_spr.png)no-repeat -253px 0;margin: 0 auto;text-indent: -9999px;overflow: hidden;}
+        #banner .banner-download p:first-child{background-position: -253px 0;margin-top:44px; transition: 0.5s linear;} 
+        #banner .banner-download p:last-child{background-position: -253px -25px;transition: 0.5s  linear; } 
+        #banner .banner-download:hover p:first-child{transform: translatey(-20px);opacity: 0.5;}
+       
+        #banner .banner-download:hover p:last-child{transform: translatey(20px);opacity: 0.5;}
+
+
+
+
+
+
+        #banner .banner-user div{width: 56px;height: 56px; border-radius: 50%;margin: 80px auto 0 auto;border: 4px solid #283257;box-sizing: border-box; overflow: hidden;}
+        #banner .banner-user img{width: 100%;height: 100%;}
+        #banner .banner-user p{text-align: center;font-size: 12px;color: white;margin-top: 20px;}
+        #banner .banner-user a{color: #34f1d0;}
+
+        #banner .banner-list{width: 497px;height: 253px;overflow: hidden;margin: 13px 0 0 4px;position: relative;}        
+        #banner .banner-list-ul{width: 2000px;}      
+        #banner .banner-list-ul li{width: 497px;height: 253px;float: left;}
+        #banner .banner-bottomline{width: 100%; height: 37px;background: rgba(0,0,0,.5);border-top: 1px solid #514b55;position: absolute;bottom:0;left: 0; }
+        #banner .banner-bottomline-ul{text-align: center;margin-top: 11px;}
+        #banner .banner-bottomline-ul li{display: inline-block;width: 15px;height: 15px;background: url(./images/top.png)no-repeat -603px -299px; cursor: pointer;}
+        #banner .banner-bottomline-ul li.active{background-position: -581px -299px;}
+
+        #banner .banner-bottomline-leftbth, #banner .banner-bottomline-rightbth{width: 12px;height: 24px; position: absolute;top: 8px; background: url(./images/top.png)no-repeat ;cursor: pointer; }
+        #banner .banner-bottomline-leftbth{left: 8px;background-position: -542px -296px;}
+        #banner .banner-bottomline-rightbth{right: 8px;background-position: -554px -296px;}
+        #banner .banner-bottomline-leftbth:hover{background-position: -542px -325px;}
+        #banner .banner-bottomline-rightbth:hover{background-position: -554px -325px;}
+        #banner .banner-list-lt,#banner .banner-list-rt,#banner .banner-list-lb,#banner .banner-list-rb{width: 12px;height: 12px;background: url(./images/top.png)no-repeat;position: absolute;}        
+        #banner .banner-list-lt{left: -2px;top:-4px;background-position:-621px -299px; }
+        #banner .banner-list-rt{right: -2px;top:-4px;background-position:-634px -299px; }
+        #banner .banner-list-lb{left: -2px;bottom:-4px;background-position:-621px -312px; }
+        #banner .banner-list-rb{right: -2px;bottom:-4px;background-position:-634px -312px; }
+        #banner .banner-right{width: 200px;height: 255px;position: relative; margin:12px 0 0 12px;}
+        #banner .banner-right-lt,#banner .banner-right-rt,#banner .banner-right-rb,#banner .banner-right-lb{width: 15px;height: 15px;background: url(./images/top.png)no-repeat;position: absolute;}
+        #banner .banner-right-lt{left: -4px;top: -4px;background-position:-681px -298px; }
+        #banner .banner-right-rt{right: -4px;top: -4px;background-position:-696px -298px;}
+        #banner .banner-right-lb{left: -4px;bottom: -6px;background-position:-681px -313px;}
+        #banner .banner-right-rb{right: -4px;bottom: -6px;background-position:-696px -313px;}
+    </style>
+</head>
+<body>
+    <div id="head" class="container-fluid">
+        <div class="container">
+            <div class="head-logo l" >
+                <a href="#">腾讯游戏</a>
+            </div>
+            <div class="head-ad l">
+                <a href="#">
+                    <img src="./images/23040.1561514895.7cfbeeebd529c5092ba15b7607d45730.230x40_6487.jpg" alt="">
+                </a>
+            </div>
+       
+            <div class="head-menu r">
+                <div class="head-menu-czsh l">
+                    <a href="#">成长守护平台</a>
+                </div>
+                <div class="head-menu-top l">
+                    <a href="#">腾讯游戏排行榜</a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div id="main" class="container-fluid">
+            <div id="nav" class="container-fluid">
+            <div class="container">
+                <div class="nav-logo">
+                    <a href="#">
+                        <img src="./images/inside_logo.png" alt="QQ飞车" title="QQ飞车">
+                    </a>
+                </div>
+                <dl class="nav-index">
+                    <dt>
+                        <a href="#">首页</a>
+                    </dt>
+                </dl>
+                <dl class="nav-zl">
+                        <dt></dt>         
+                        <dd><a href="#">新手指引</a></dd>
+                        <dd><a class="hot" href="#" >官方漫画</a></dd>
+                        <dd><a class="new" href="#" >飞车手游</a></dd>
+                        <dd><a href="#">精美壁纸</a></dd>
+                        <dd><a href="#">游戏下载</a></dd>
+                </dl>
+                <dl class="nav-ss">
+                        <dt></dt>         
+                        <dd><a class="hot" href="#" >ssc</a></dd>
+                        <dd><a href="#">谁是车王</a></dd>
+                        <dd><a href="#">全民争霸赛</a></dd>
+                </dl>
+                <dl class="nav-hd">
+                        <dt></dt>         
+                        <dd><a class="hot" href="#" >版本专区</a></dd>
+                        <dd><a href="#">合作专区</a></dd>
+                        <dd><a href="#">cdk兑换</a></dd>
+                        
+             </dl>
+            </div>
+        </div>
+            <div id="link" class="container">
+                <a href="#"></a>
+            </div>
+        <div id="banner" class="container">
+            <div class="banner-left l">
+                <div class="banner-download">
+                    <p>下载游戏</p>
+                    <p>download</p>
+                </div>
+                <div class="banner-user">
+                    <div>
+                    <img src="./images/1.jpg" alt="">
+                    </div>
+                    <p>欢迎<a href="">登录</a> ，进入飞车世界</p>
+                </div>
+            </div>
+            <div class="banner-center l">
+                <div class="banner-list">
+                    <ul class="banner-list-ul">
+                        <li><a href="#"><img src="https://ossweb-img.qq.com/upload/adw/image/20190610/4b4aa84abf0d2b7299210fe3105ac0ad.jpeg" alt=""></a>
+                        </li>
+                        <li><a href="#"><img src="https://ossweb-img.qq.com/upload/adw/image/20190629/08f1d321cbd947b909084eaa9a8f792b.jpeg" alt=""></a>
+                        </li>
+                        <li><a href="#"><img src="https://ossweb-img.qq.com/upload/adw/image/20190628/2998d89978576a83764160c3190cf530.jpeg" alt=""></a>
+                        </li>
+                    </ul>
+                    <div class="banner-bottomline">
+                        <ul class="banner-bottomline-ul">
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="banner-bottomline-leftbth">
+
+                        </div>
+                        <div class="banner-bottomline-rightbth">
+
+                        </div>
+                    </div>
+                    <i class="banner-list-lt"></i>
+                    <i class="banner-list-rt"></i>
+                    <i class="banner-list-lb"></i>
+                    <i class="banner-list-rb"></i>
+                </div>
+            </div>
+            <div class="banner-right l">
+                <a href="#"><img src="./images/550e704d486c9303284289486c0d7b38.jpeg " alt=""></a>
+                <i class="banner-right-lt"></i>
+                <i class="banner-right-rt"></i>
+                <i class="banner-right-rb"></i>
+                <i class="banner-right-lb"></i>
+            </div>  
+</div>  
+</body>
+</html>
