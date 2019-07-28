@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css实现图片轮播手动切换效果</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.listbox{width: 800px;height:800px ;border: 1px solid #333333;margin: 100px;position: relative;}
+			.listbox ul li{width: 50px;height: 50px;background: rgba(0,0,0,0.5);float: left;list-style: none;text-align: center;line-height:50px ;color: white;margin: 0 2px;}
+			.listbox ul li a{color: white;text-decoration: none;}
+			.listbox ul{position: absolute;right: 20px;bottom: 10px;}
+			.listbox ul li:hover{background: rgba(0, 0, 0,0.8);}
+			.listpic{overflow: hidden;width:800px ;height: 800px;} 
+		</style>
+	</head>
+	<body>
+		<div class="listbox">
+		<div class="listpic">
+			<img src="images/timg.jpg" id="pic1"/>
+			<img src="images/timg (5).jpg" id="pic2"/>
+			<img src="images/timg (4).jpg" id="pic3"/>
+			<img src="images/timg (2).jpg" id="pic4"/>
+		</div>
+		<ul>
+			<li><a href="#pic1">1</a></li>
+			<li><a href="#pic2">2</a></li>
+			<li><a href="#pic3">3</a></li>
+			<li><a href="#pic4">4</a></li>
+		</ul>
+		</div>
+	</body>
+</html>

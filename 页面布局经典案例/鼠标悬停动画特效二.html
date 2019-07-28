@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			div{width: 300px;height: 300px;border-radius: 50%;background: red;margin: 50px auto;position: relative;}
+			div img{width: 300px;height: 300px;border-radius: 50%;transition: 1s;}
+			p{width: 260px;height: 260px;border-radius: 50%;border: 20px solid rgba(255,255,255,0.5);position: absolute;top: 0;left: 0;opacity: 0.5;background-origin: border-box;}
+			h1{width: 300px;height: 300px;background: rgba(0,0,0,0);border-radius: 50%;position: absolute;left: -300px;top: 0;transition: 1s;color: white;font-size: 40px;text-align: center;line-height: 300px;}
+			div:hover h1{transform: translateX(300px);background: rgba(0,0,0,0.5);}
+			div:hover img{transform: rotate(180deg);}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="images/timg (3).jpg" />
+			<p></p>
+			<h1>雷姆</h1>
+		</div>
+	</body>
+</html>

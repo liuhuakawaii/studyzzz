@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css实现网页弹窗居中的方法</title>
+		<style type="text/css">
+		*{margin: 0;padding: 0;}
+		.box{width: 300px;height: 300px;border: 1px solid red;margin: 100px;}
+		/*第一种方法 定位+margin值*/
+		/*p{width: 200px;height: 200px;background:green ;position: fixed;top: 50%;left: 50%;margin-top: -100px;margin-left: -100px;}*/
+		/*第二种方法:定位+transform 缺点:低版本不兼容*/
+		/*p{width: 200px;height: 200px;background:green ;position: fixed;top: 50%;left: 50%;transform:translate(-100px,-100px) ;}*/	
+		/*第三种:技巧法*/
+		/*p{width: 200px;height: 200px;background:green ;position: fixed;top: 0px;left: 0px;right: 0px;bottom:0px;margin: auto;}*/
+		/*  第四种：弹性盒*//*不能保证body为正好一屏,不适用于弹窗,在盒子中保持居中可行*/
+		html,body{height: 100%;width: 100%;}
+		body{display: flex;justify-content: center;align-items: center;}
+		 p{width:200px;height:200px;background:green ;}
+		</style>
+	</head>
+	<body>
+		<p></p>
+	</body>
+</html>

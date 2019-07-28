@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css定位实现图片放大效果</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.listbox{width: 1800px;height:1000px;margin: 50px auto;}
+			.listbox h3{font-size: 17px;color: #a53333;text-align: center;border-bottom: 1px dashed #CCCCCC;font-weight: 300px;padding-bottom: 5px;}
+			.pic img{width: 555px;height: 478px;border: 1px solid #CCCCCC;padding: 2px;display: block;}
+			.pic{border: 1px solid #BBBBBB;padding: 5px;width: 556px;background: #EEEEEE;float: left;margin: 3px;position: relative;}
+			.list{margin-top: 10px;}
+			.pic img:nth-of-type(2){display:none;width: 1100px;height:969px ;position: absolute;top:-20px ;left: -40px;z-index: 88;}
+			.pic:hover img:nth-of-type(2){ display: block;border-color: #000;}
+			.listbox p{text-align: center;font-size: 12px;color: #777;}
+			.clear{clear:both ;}
+			/*图片会默认向下撑大3像素 解决办法:img{display: block;}*/
+			/*解决高度塌陷方法:
+			1给父元素添加overflow:hidden 缺点不适合和定位一起用
+			2给所有浮动元素的后面添加一个空的元素 并且添加声明clear both*/
+		</style>
+	</head>
+	<body>
+		<div class="listbox">
+			<h3>Hoverbox Image Gallery</h3>
+			<div class="list">
+				<div class="pic">
+					<img src="images/timg (5).jpg"/>
+					<img src="images/timg (5).jpg"/>
+				</div>
+				<div class="pic">
+					<img src="images/timg (5).jpg"/>
+					<img src="images/timg (5).jpg"/>
+				</div>
+				
+				<div class="pic">
+					<img src="images/timg (5).jpg"/>
+					<img src="images/timg (5).jpg"/>
+				</div>
+				
+				<div class="pic">
+					<img src="images/timg (5).jpg"/>
+					<img src="images/timg (5).jpg"/>
+				</div>
+				<div class="clear">
+					
+				</div>
+				<p>雷姆是我老婆嗷！</p>
+				
+			</div>
+		</div>
+	</body>
+</html>

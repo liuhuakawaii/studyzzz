@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		body{background: black;}
+		.man{width:100px ;height: 200px;position: absolute;top: 200px;left: 100px;animation: run 3s infinite linear;}
+		@keyframes run{
+			from{transform: translateX(0);}
+			to{transform: translateX(1200px);}
+		}
+		.head{width: 50px;height: 60px;border-radius: 25px;border: 2px solid white;margin: 0 auto;}
+		.body{width: 2px;height: 65px;border-radius: 25px;border: 2px solid white;margin: 0 auto;}
+		.leg-left,.leg-right{width: 50px;height: 55px;border-right: 2px solid white;border-bottom: 2px solid white;position: absolute;top: 128px;transform-origin:100% 0 ;}
+		.hand-left,.hand-right{width: 40px;height: 50px;border-left: 2px solid white;border-bottom: 2px solid white;position: absolute;top: 85px;left: 49px;transform-origin:0 0 ;}
+		.hand-left{transform: rotate(45deg);animation: hand-left 0.5s linear infinite;}
+		.hand-right{transform: rotate(45deg);animation: hand-right 0.5s linear infinite;}
+		.leg-left{transform: rotate(45deg);animation: leg-left 0.5s linear infinite;}
+		.leg-right{transform: rotate(-80deg);animation: leg-right 0.5s linear infinite;}
+		@keyframes hand-left{
+			0%{transform: rotate(60deg);}
+			50%{transform: rotate(-45deg);}
+			100%{transform: rotate(60deg);}
+		}
+			@keyframes hand-right{
+			0%{transform: rotate(-45deg);}
+			50%{transform: rotate(60deg);}
+			100%{transform: rotate(-45deg);}
+		}
+			@keyframes leg-left{
+			0%{transform: rotate(45deg);}
+			50%{transform: rotate(-60deg);}
+			100%{transform: rotate(45deg);}
+		}
+			@keyframes leg-right{
+			0%{transform: rotate(-80deg);}
+			50%{transform: rotate(60deg);}
+			100%{transform: rotate(-80deg);}
+		}
+		.
+	</style>
+	<body>
+		<div class="man">
+			<div class="head"></div>
+			<div class="body"></div>
+			<div class="hand-left"></div>
+			<div class="hand-right"></div>
+			<div class="leg-left"></div>
+			<div class="leg-right"></div>
+			
+		</div>
+	</body>
+</html>

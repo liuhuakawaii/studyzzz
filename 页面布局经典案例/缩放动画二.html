@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			div{width: 300px;height: 300px;border-radius: 50%;text-align: center;margin: 0 auto;position: relative;}
+			p{width: 260px;height: 260px;background: url("images/timg (3).jpg");border-radius: 50%; border: 20px solid rgba(255,255,255,0.5);background-origin: border-box;position: absolute;transition:1s linear; transform-origin:bottom;z-index: 1;}
+			h1{width: 300px;height: 300px;font-size: 40px;color: white;opacity: 0;background: black;border-radius: 50%;transition: 1s  linear;transform: scale(0);transform-origin: bottom;position: absolute;}
+			div:hover p{transform: scale(0.5,0.5);}
+			div:hover h1{opacity: 1;transform:scale(1);}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p></p>	
+			<h1>雷姆</h1>
+		</div>
+	</body>
+</html>

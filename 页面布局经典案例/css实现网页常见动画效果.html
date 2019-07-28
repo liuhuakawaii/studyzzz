@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css实现网页常见动画效果</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.box{width: 550px;height: 478px;margin: 50px auto;position:relative ;overflow: hidden;}
+			p{width: 550px;height:478px;background: black;opacity: 0;transition:0.5s linear;position: absolute;top: 0;transition: 0.5s linear;}
+			.box:hover p{opacity: 0.7;}
+			.box h3{position: absolute;width: 100%;top:-20px;text-align: center;font-size: 35px;color: #2ebcff;opacity:0 ;transition: 0.5s linear;}
+			.box:hover h3{top:100px;opacity: 1;}
+			.box img:nth-of-type(2){position: absolute;top: 239px;right: -90px ;transition:0.5s linear;}
+			.box:hover img:nth-of-type(2){right: 260px;}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="images/timg (5).jpg"/>
+	            <p class="bg"></p>
+	            <h3>雷姆是我老婆嗷~</h3>
+	   
+	            <img src="images/@V1PXLJ~QA8PHU@VC1`3D}8.png"/>
+		</div>
+	</body>
+</html>
+ 
